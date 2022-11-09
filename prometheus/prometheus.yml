@@ -30,9 +30,9 @@ scrape_configs:
 
   - job_name: 'speedtest'
     metrics_path: /metrics
-    scrape_interval: 15m
-    scrape_timeout: 60s # running speedtest needs time to complete
-    
+    scrape_interval: 3m  #15m
+    scrape_timeout: 80s # running speedtest needs time to complete
+
     static_configs:
       - targets: ['speedtest:9696']
 
@@ -73,4 +73,4 @@ scrape_configs:
   - job_name: 'sonos'
     static_configs:
     - targets: ['192.168.1.42:1915']
-    
+
