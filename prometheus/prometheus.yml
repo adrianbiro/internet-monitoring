@@ -12,15 +12,13 @@ global:
 # Load and evaluate rules in this file every 'evaluation_interval' seconds.
 rule_files:
     - 'alert.rules'
-  # - "first.rules"
-  # - "second.rules"
 
 # A scrape configuration containing exactly one endpoint to scrape:
 # Here it's Prometheus itself.
 scrape_configs:
 
   - job_name: 'prometheus'
-
+    metrics_path: /metrics
     # Override the global default and scrape targets from this job every 5 seconds.
     scrape_interval: 5s
 
